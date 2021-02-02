@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Layout3-1</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         color: #140078;
+         text-align: center;
+         background: #f3e5f5;
+      }
+
+      #wrap {
+         width: 1200px;
+         margin: 0 auto;
+         font-size: 40px;
+         text-align: center;
+      }
+
+      header {
+         width: 100%;
+         height: 150px;
+         line-height: 150px;
+         background: #9575cd;
+      }
+
+      aside {
+         float: left;
+         width: 30%;
+         height: 700px;
+         line-height: 700px;
+         background: #7e57c2;
+      }
+
+      section {
+         float: left;
+         width: 70%;
+         height: 700px;
+         background: #370f79;
+         color: #fff;
+      }
+
+      section div {
+         position: relative;
+         height: 200px;
+         top: 250px;
+      }
+
+      section h2::before {
+         content: '1 - 기본';
+      }
+
+      footer {
+         clear: both;
+         width: 100%;
+         height: 150px;
+         line-height: 150px;
+         background: #5e35b1;
+      }
+
+      /* 화면너비 0 ~ 1200px */
+      @media (max-width: 1220px) {
+         #wrap {
+            width: 95%;
+         }
+
+         section h2::before {
+            content: '2 - 1200px ~ 0';
+         }
+      }
+
+      /* 0 ~ 768px */
+      @media (max-width: 768px) {
+         #wrap {
+            width: 100%;
+         }
+
+         section h2::before {
+            content: '3 - 768px ~ 0';
+         }
+      }
+
+      /* 0 ~ 480px */
+      @media (max-width: 480px) {
+         #wrap {
+            width: 100%;
+            font-size: 28px;
+         }
+
+         header {
+            height: 300px;
+            line-height: 300px;
+         }
+
+         aside {
+            float: none;
+            width: 100%;
+            height: 300px;
+            line-height: 300px;
+         }
+
+         section {
+            float: none;
+            color: #fff;
+            width: 100%;
+            height: 300px;
+         }
+
+         section div {
+            position: relative;
+            top: 80px;
+         }
+
+         section h2::before {
+            content: '4 - 480px ~ 0';
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <div id="wrap">
+      <header>Header</header>
+      <aside>Aside</aside>
+      <section>
+         <div>
+            <h1>Section</h1>
+            <h2></h2>
+         </div>
+      </section>
+      <footer>Footer</footer>
+   </div>
+</body>
+
+</html>
