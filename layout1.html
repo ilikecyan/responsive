@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <style>
+      #wrap {
+         width: 1000px;
+         height: 900px;
+         margin: 0 auto;
+      }
+
+      header {
+         width: 1000px;
+         height: 100px;
+         background: #111;
+      }
+
+      nav {
+         width: 1000px;
+         height: 100px;
+         background: #222;
+      }
+
+      aside {
+         float: left;
+         width: 300px;
+         height: 600px;
+         background: #333;
+      }
+
+      section {
+         float: left;
+         width: 700px;
+         height: 600px;
+         background: #444;
+      }
+
+      footer {
+         /* float를 쓰면 height가 0이 된다
+            clearfix clear:both;사용
+          */
+         clear: both;
+         width: 1000px;
+         height: 100px;
+         background: #555;
+      }
+   </style>
+</head>
+
+<body>
+   <div id="wrap">
+      <header></header>
+      <nav></nav>
+      <aside></aside>
+      <section></section>
+      <footer></footer>
+   </div>
+</body>
+
+</html>
+
+
+<!-- 
+
+   ** HTML5부터 의미있는 div박스를 만들자 => 시맨틱 태그 **
+   ie8에선 지원이 안됨 최신 소스라서
+
+   header 
+   웹 ㅁ문서의 소개 컨텐츠, 네비게이션 링크 정의 
+   섹션의 제목 태그를 포함하기 위한것이지 필수는 아님
+   제목 로고 아이콘 저자 정보
+
+   nav
+   주요 네비게이션 링크는 nav태그 사용
+   웹문서 네비게이션 링크 정의
+   footer 영역엔 사용 x
+   여러개 있을 수 있지만 사이트 탐색, 페이지 탐색용
+   의미에 따라 태그를 붙일 수 있어야 웹 표준을 준수하는것
+
+   aside
+   메인 콘텐츠와 관련된 사이드의 정보 광고
+   side => aside
+
+   section 
+   탭페이지, 홈페이지 소개, 연락처, 뉴스항목과 같이 주제별로 분활
+   제목을 나타내는 h1 ~ h6 포함되어있어야 한다
+   스타일링 요소 X , 스크립트 편의, 영역을 위함은 div가 좋다
+   section 태그가 일반적인 영역의 주제가 아니라면
+   구체적인 요소(article, aside, nav)를 대신 사용하는것이 적절
+   
+   footer
+   사이트와 관련된 정보, 저작권자, 연락처, 사이트 맵
+
+   article
+   독립적인 항목 
+   section 요소안에 article 쓸 수 있다 그 반대로도 사용 가능
+   section이 하나의 주제면 
+   article은 주제를 묶는 독립적인 콘텐츠를 나타냄
+
+ -->
